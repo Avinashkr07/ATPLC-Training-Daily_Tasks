@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f7feff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(131, 131, 131);
+}
+
+form input {
+    accent-color: rgb(38, 29, 43);
+}
+
+form h2 {
+    margin-bottom: 5px;
+    color: rgb(38, 29, 43);
+}
+
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+form .basic-info input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(65, 60, 67);
+    outline: none;
+}
+
+form .tea select,
+form .tea option {
+    padding: 5px;
+    width: 100%;
+}
+
+form .btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btns input {
+    flex: 1;
+    border: 1px solid rgb(65, 60, 67);
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btns input:first-child {
+    background: rgb(245, 125, 167);
+}
+
+.btns input:last-child {
+    background: rgb(114, 114, 255);
+}

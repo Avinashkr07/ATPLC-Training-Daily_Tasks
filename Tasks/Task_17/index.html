@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 17</title>
+    <style>
+        body {
+            --primary: #565bf4;
+            --bg: #f0fcff;
+            --text: #121033;
+            --gradient: linear-gradient(-315deg, #f0fcff, #e7faff);
+            --shadow-black: rgba(20, 20, 92, 0.2);
+            --shadow-white: rgb(255, 255, 255);
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 1rem 10%;
+            margin: 0;
+            box-sizing: border-box;
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            justify-content: center;
+            background: var(--gradient);
+        }
+
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            background: var(--gradient);
+            border-radius: 1rem;
+            padding: 30px 20px;
+            box-shadow: 5px 5px 10px -5px var(--shadow-black),
+                -5px -5px 10px -5px var(--shadow-white),
+                inset 5px 5px 10px -5px var(--shadow-black),
+                inset -5px -5px 10px -5px var(--shadow-white);
+        }
+
+        .section .input {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section input {
+            padding: 20px;
+            background: transparent;
+            box-shadow: -5px -5px 10px -5px var(--shadow-black),
+                5px 5px 10px -5px var(--shadow-white),
+                inset 5px 5px 10px -5px var(--shadow-black),
+                inset -5px -5px 10px -5px var(--shadow-white);
+            border-radius: .5rem;
+            border: none;
+            color: var(--text);
+        }
+
+        .section button {
+            padding: 20px;
+            border: none;
+            background: var(--primary);
+            color: var(--text);
+            font-weight: bold;
+            box-shadow: -5px -5px 10px -5px var(--shadow-black),
+                5px 5px 10px -5px var(--shadow-white),
+                inset 5px 5px 10px -5px var(--shadow-black),
+                inset -5px -5px 10px -5px var(--shadow-white);
+            border-radius: .5rem;
+            cursor: pointer;
+            color: var(--bg);
+            text-shadow: 1px 1px 5px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="division-result"></div>
+        <div class="input">
+            <input type="number" id="divisor" placeholder="divisor">
+            <input type="number" id="dividor" placeholder="dividor">
+            <button onclick="divideByZero()">divide</button>
+        </div>
+    </div>
+    <div class="section">
+        <h1>Number Guessing Game</h1>
+        <div class="result-message"></div>
+        <div class="input">
+            <input id="guess-input" type="text" placeholder="enter a number 1-50">
+            <button onclick="guess()">Check my guess</button>
+        </div>
+    </div>
+    <div class="section">
+        <div class="reference-message"></div>
+    </div>
+    <div class="section">
+        <div class="array-message"></div>
+    </div>
+
+
+    <script>
+
+        var box1 = document.querySelector('.reference-message');
+        try {
+            box1.innerHTML = "'var x=10' and 'y' is not defined. but we are trying to acess<br>"
+            let x = 95;
+            box1.innerHTML += `x = ${x}`;
+            document.write(y);
+        }
+        catch (e) {
+            box1.innerHTML += `<br>b = ${e}`;
+        }
+
+
+        var box2 = document.querySelector('.array-message');
+        var myarray = [9, 8, 12, 78, 45, 6];
+        var size = 5;
+
+        try {
+            box2.innerHTML = "array = [9, 8, 12, 78, 45, 6] <br/>"
+            for (var i = 0; i <= 5; ++i)
+
+                if (i < size) {
+                    box2.innerHTML += `<br>myarray[${i}] = ` + myarray[i];
+                }
+                else
+                    throw ('try to access index is not present')
+        }
+        catch (e) {
+            box2.innerHTML += '<br> error = ' + e;
+        }
+
+
+        function divideByZero() {
+            var a = document.getElementById('divisor')
+            var b = document.getElementById('dividor')
+            var result = document.querySelector('.division-result')
+            try {
+                if (a.value === '' || b.value === '')
+                    throw ('fill all details')
+                else if (parseInt(b.value) === 0) {
+                    throw ('division by zero.')
+                }
+                result.innerHTML = `${parseInt(a.value)} / ${parseInt(b.value)} = ${parseInt(a.value) / parseInt(b.value)}`;
+            } catch (e) {
+                result.innerHTML = e
+            }
+        }
+
+
+        var n = Math.floor(Math.random() * 20)
+        function guess() {
+            var input = document.querySelector('#guess-input')
+            var result = document.querySelector('.result-message')
+            try {
+                if (input.value === '')
+                    throw 'Enter a valid Number';
+                if (input.value > 20 || input.value < 0)
+                    throw 'Number should be in range of 1-50';
+                else {
+                    if (n === parseInt(input.value)) {
+                        result.innerHTML = 'Hurray you have guessed it correctly ' + input.value
+                    }
+                    else if (parseInt(input.value) > n) {
+                        result.innerHTML = 'you guessed a large number ' + input.value
+                    }
+                    else
+                        result.innerHTML = 'you guessed a small number ' + input.value
+
+                }
+
+            }
+            catch (e) {
+                result.innerHTML = e
+            }
+            finally {
+                input.value = ''
+            }
+        }
+
+    </script>
+</body>
+
+</html>

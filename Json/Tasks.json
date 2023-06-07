@@ -1,0 +1,192 @@
+[
+    {
+        "task_no": "01",
+        "task_title": "HTML Heading + CSS",
+        "tasks": [
+            "Make a webpage using heading tag of html which contains your basic information like college name, name, registration no, roll no and your short introduction.",
+            "Also style the texts and pages with css using your creativity."
+        ],
+        "task_link": "/Tasks/Task_1/index.html"
+    },
+    {
+        "task_no": "02",
+        "task_title": "HTML Paragraph + CSS",
+        "tasks": [
+            "Make a webpage with article using heading tag and paragraph tag of html which contains a heading and one or more paragraph related to that topic.",
+            "You can take any topic like My city, any technology/topic you have read, our college etc.",
+            "Also style the texts and pages with css properties taught in the class as well as other properties as per your creativity."
+        ],
+        "task_link": "/Tasks/Task_2/index.html"
+    },
+    {
+        "task_no": "03",
+        "task_title": "HTML Images + CSS",
+        "tasks": [
+            "In the article you have done in last task add one or more images as per your creativity. Also decorate these images with css properties taught in the class as well as other properties as per your creativity."
+        ],
+        "task_link": "/Tasks/Task_3/index.html"
+    },
+    {
+        "task_no": "04",
+        "task_title": "HTML Background Images+CSS",
+        "tasks": [
+            "In the article you have done in last task add any background image. Also properly align with css properties taught in the class as well as other properties as per your creativity."
+        ],
+        "task_link": "/Tasks/Task_4/index.html"
+    },
+    {
+        "task_no": "05",
+        "task_title": "Minor Project-1",
+        "tasks": [
+            "Make a mini website on any topic (containing three or more web pages) using heading, paragraph, image and background image taught in last sessions.",
+            "Also design attractive navbar at the top of these pages using anchor tag & nav tag taught in last two sessions.",
+            "Also design these pages and navbar using css properties taught in all the sessions and other properties as per your creativity."
+        ],
+        "task_link": "/Tasks/Task_5/index.html"
+    },
+    {
+        "task_no": "06",
+        "task_title": "HTML Tables-I",
+        "tasks": [
+            "Design a table containing name, hometown and contact no of 5-10 batchmate/college friend."
+        ],
+        "task_link": "/Tasks/Task_6/index.html"
+    },
+    {
+        "task_no": "07",
+        "task_title": "HTML Tables-II",
+        "tasks": [
+            "Design a table containing name, registration no, CGPA till last semester having 2 columns extended  using colspan & 2 row extended using rowspan taught in the last session."
+        ],
+        "task_link": "/Tasks/Task_7/index.html"
+    },
+    {
+        "task_no": "08",
+        "task_title": "Minor Project-2",
+        "tasks": [
+            "Make a resume of your own using paragraph, anchor, image, heading & table tag.Also mention hobbies, strength, skills etc using lists"
+        ],
+        "task_link": "/Tasks/Task_8/index.html"
+    },
+    {
+        "task_no": "09",
+        "task_title": "HTML Divison",
+        "tasks": [
+            "Design a webpage containing four division with heading Home,About,Gallery,Contact. Also put relevant logo/picture above of these heading and align all the divison in same line."
+        ],
+        "task_link": "/Tasks/Task_9/index.html"
+    },
+    {
+        "task_no": "10",
+        "task_title": "HTML Forms",
+        "tasks": [
+            "Design a basic information form which takes name (input type), mobile no, email address, gender(radio), Education done(using checkbox) and do you like tea? (using select). Also make one submit and one reset button in it."
+        ],
+        "task_link": "/Tasks/Task_10/index.html"
+    },
+    {
+        "task_no": "11",
+        "task_title": "Minor Project-3",
+        "tasks": [
+            "Make a duplicate of sarkariresult.com website using only HTML and CSS concept and also make it responsive using media query tag."
+        ],
+        "task_link": "/Tasks/Task_11/index.html"
+    },
+    {
+        "task_no": "12",
+        "task_title": "Major Project-1",
+        "tasks": [
+            "Try to think of your favourite topic and develop a static & fully responsive website using all HTML and CSS concept."
+        ],
+        "task_link": "/Tasks/Task_12/index.html"
+    },
+    {
+        "task_no": "13",
+        "task_title": "JavaScript : Basic",
+        "tasks": [
+            "Write a program to print your name and address.",
+            "Write a program to check whether value and data-type of two variable are same.",
+            "Write a program to add two strings and return them with all alphabet capital.",
+            "Write a JavaScript program to convert the length of a given string in bytes.",
+            "Write a JavaScript program to round a number to a specified amount of digits."
+        ],
+        "task_link": "/Tasks/Task_13/index.html"
+    },
+    {
+        "task_no": "14",
+        "task_title": "JavaScript : Conditional, Loops, Functions",
+        "tasks": [
+            "Write a function that filters out negative numbers.",
+            "Write a JavaScript function to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.",
+            "Write a function of Fibonacci series using JavaScript",
+            "Write a JavaScript program to sum the multiples of 3 and 5 under 1000 using function.",
+            "WWrite a program to return cube of a number using function object."
+        ],
+        "task_link": "/Tasks/Task_14/index.html"
+    },
+    {
+        "task_no": "15",
+        "task_title": "JavaScript : Arrays",
+        "tasks": [
+            "Write a program to sort a JavaScript Array.",
+            "Write a program to concatenate two array elements and store them in new array.",
+            "Write a program to remove first element from JavaScript Array."
+        ],
+        "task_link": "/Tasks/Task_15/index.html"
+    },
+    {
+        "task_no": "16",
+        "task_title": "JavaScript : Arrays",
+        "tasks": [
+            "Write a JavaScript Script that will took all the values from Basic Information Form you have created earlier and show on the same page & below the form.",
+            "Write a JavaScript Script that will change the image inside an img tag on button click.",
+            "Write a JavaScript Script that will increase and decrease the font size of text on button click.",
+            "Write a JavaScript Script that shows current date & time on a webpage."
+        ],
+        "task_link": "/Tasks/Task_16/index.html"
+    },
+    {
+        "task_no": "17",
+        "task_title": "JavaScript : Exception Handling",
+        "tasks": [
+            "Write a program to handle the exception caused by printing the variable without declaring it.",
+            "Write a program to throw 'divide by Zero' error using throw statement when a number is divided by Zero.",
+            "Write a program to throw 'out of bound error' error using throw statement when a program try to access an array index which is not present.",
+            "Write a program of exception handling using finally statement"
+        ],
+        "task_link": "/Tasks/Task_17/index.html"
+    },
+    {
+        "task_no": "18",
+        "task_title": "SQL : Creating Database and Table",
+        "tasks": [
+            "Write a SQL query to create a database named 'library'.",
+            "Write a SQL query to delete above database.",
+            "Write a SQL query to create a table named 'book_records' with columns like Book_Library_No, Book_Name, Author_Name, Book_Edition, Price etc.",
+            "Write a SQL query to delete above table."
+        ],
+        "task_link": "/Tasks/Task_18/index.html"
+    },
+    {
+        "task_no": "19",
+        "task_title": "SQL : Alter Table and Insert Data",
+        "tasks": [
+            "Write a query to alter table 'book_records' created earlier to add column 'no_of_pages' in it.",
+            "Write a query to add primary key to any unique column in the 'book_records'.",
+            "Write a query to insert data into 'book_records' table."
+        ],
+        "task_link": "/Tasks/Task_19/index.html"
+    },
+    {
+        "task_no": "20",
+        "task_title": "Final Project",
+        "tasks": [
+            "Submit your final project which must fulfill following criteria:",
+            "1. It must have use of HTML,CSS,JS, MySQL and PHP (taught in the course).",
+            "2. It must be responsive.",
+            "3. It must contains all concepts taught in the course.",
+            "4. It must be hosted online on any free hosting platform(like 000webhost).(Learn this itself and ask us if any issue come.)"
+        ],
+        "task_link": "/Tasks/Task_20/index.html"
+    }
+]

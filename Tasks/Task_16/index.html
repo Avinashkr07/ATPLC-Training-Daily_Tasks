@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 16</title>
+    <style>
+        body {
+            --primary: #565bf4;
+            --bg: #f0fcff;
+            --text: #121033;
+            --gradient: linear-gradient(-315deg, #f0fcff, #e7faff);
+            --shadow-black: rgba(20, 20, 92, 0.2);
+            --shadow-white: rgb(255, 255, 255);
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 1rem 10%;
+            margin: 0;
+            box-sizing: border-box;
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            justify-content: center;
+            background: var(--gradient);
+        }
+
+        .section:first-child {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .textsize {
+            font-size: 4rem;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            background: var(--gradient);
+            border-radius: 1rem;
+            padding: 30px 20px;
+            box-shadow: 5px 5px 10px -5px var(--shadow-black),
+                -5px -5px 10px -5px var(--shadow-white),
+                inset 5px 5px 10px -5px var(--shadow-black),
+                inset -5px -5px 10px -5px var(--shadow-white);
+        }
+
+        .section .input {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        .section img {
+            width: 200px;
+            align-self: center;
+        }
+
+
+
+        .section input {
+            border-radius: .5rem;
+            padding: 20px;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            box-shadow: -5px -5px 10px -5px var(--shadow-black),
+                5px 5px 10px -5px var(--shadow-white),
+                inset 5px 5px 10px -5px var(--shadow-black),
+                inset -5px -5px 10px -5px var(--shadow-white);
+        }
+
+        .section button {
+            border-radius: .5rem;
+            padding: 20px;
+            border: none;
+            background: var(--primary);
+            color: var(--text);
+            font-weight: bold;
+            box-shadow: -5px -5px 10px -5px var(--shadow-black),
+                5px 5px 10px -5px var(--shadow-white),
+                inset 5px 5px 10px -5px var(--shadow-black),
+                inset -5px -5px 10px -5px var(--shadow-white);
+            cursor: pointer;
+            color: var(--bg);
+            text-shadow: 1px 1px 5px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <button onclick="dec()">-</button>
+        <h2 class="textsize">Task 16</h2>
+        <button onclick="inc()">+</button>
+    </div>
+    <div class="section">
+        <div class="name-result"></div>
+        <div class="input">
+            <input type="text" placeholder="name" class="name">
+            <input type="text" placeholder="address" class="add">
+            <button onclick="nadd()">Print</button>
+        </div>
+    </div>
+    <div class="section">
+        <div class="string-result"></div>
+        <div class="input">
+            <input type="text" placeholder="district" class="s1">
+            <button onclick="cap()">Print</button>
+        </div>
+    </div>
+    <div class="section">
+        <div class="length-result"></div>
+        <div class="input">
+            <input type="text" placeholder="enter a string" class="s">
+            <button onclick="len()">Get Length of string</button>
+        </div>
+    </div>
+    <div class="section">
+        <div class="num-result"></div>
+        <div class="input">
+            <input type="text" placeholder="enter number" class="n">
+            <button onclick="round()">Round</button>
+        </div>
+    </div>
+    <div class="section">
+        <img
+            src="https://vignette.wikia.nocookie.net/mightandmagicheroesvi/images/0/0f/110822140939boss_cate.jpg/revision/latest?cb=20120315014939" />
+        <button onclick="img()">Change</button>
+    </div>
+
+    <script>
+
+        function nadd() {
+            const n = document.querySelector('.name');
+            const a = document.querySelector('.add');
+            const result = document.querySelector('.name-result');
+            result.innerHTML = 'name = <b>' + n.value + '</b><br>address = <b>' + a.value + '</b>'
+        }
+
+
+        function cap() {
+            const s = document.querySelector('.s1');
+            const result = document.querySelector('.string-result');
+            result.innerHTML = 'I am from <b>' + s.value.toUpperCase() + '</b> district';
+        }
+
+
+        function len() {
+            const s = document.querySelector('.s');
+            const result = document.querySelector('.length-result');
+            result.innerHTML = 'string length = <b>' + (s.value.length) * 2 + ' Bytes </b>';
+        }
+        function round() {
+            const n = document.querySelector('.n');
+            const result = document.querySelector('.num-result');
+            result.innerHTML = 'rounded number = <b>' + parseFloat(n.value).toFixed(2) + '</b>';
+        }
+
+        let a = 0;
+        function img() {
+            const img = document.querySelector('.section img');
+
+            if (a === 0) {
+                img.src = 'https://pm1.narvii.com/6406/e1f85aef6811287a19b2a94342b54fc5563614e9_00.jpg';
+                a = 1;
+            }
+            else {
+                img.src = 'https://vignette.wikia.nocookie.net/mightandmagicheroesvi/images/0/0f/110822140939boss_cate.jpg/revision/latest?cb=20120315014939';
+                a = 0;
+            }
+
+
+        }
+
+
+        const text = document.querySelector('.textsize');
+        function inc() {
+            var s = getComputedStyle(text)["fontSize"].split('px')[0];
+            s++;
+            text.style.fontSize = s + 'px';
+        }
+        function dec() {
+            var s = getComputedStyle(text)["fontSize"].split('px')[0];
+            s--;
+            text.style.fontSize = s + 'px';
+
+        }
+
+    </script>
+
+</body>
+
+</html>

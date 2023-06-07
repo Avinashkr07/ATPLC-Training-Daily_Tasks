@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+    <style>
+        body {
+            background: #252525;
+            color: rgb(180, 117, 243);
+            font-family: sans-serif;
+            font-size: 40px;
+        }
+
+        b {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write('Name = <b>Avinash Kumar</b><br>', 'Address = <b>Hazipur</b><br>');
+
+        var a = 34;
+
+        if (a === '34') {
+            document.write('34 is not equal to "34"')
+        }
+
+        var s = "My Name is ";
+        var name = prompt("Enter your Name").toUpperCase();
+
+        document.write('<br>' + s + '<b>' + name + '</b>');
+
+
+        var str = prompt("to calculate length enter string");
+        document.write('<br>string byte size = ' + '<b>' + str.length * 2 + '</b>');
+
+
+        var n = parseFloat(prompt("ente decimal number in point"));
+        document.write('<br>round n = ' + '<b>' + n.toFixed(2) + '</b>');
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 19</title>
+
+    <style>
+        body {
+            --primary: #565bf4;
+            --bg: #f0fcff;
+            --gradient: linear-gradient(-315deg, #f0fcff, #e7faff);
+            --shadow-black: rgba(20, 20, 92, 0.2);
+            --shadow-white: rgb(255, 255, 255);
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 1rem 10%;
+            margin: 0;
+            box-sizing: border-box;
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            justify-content: center;
+            background: var(--gradient);
+        }
+
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 10px;
+            background: var(--gradient);
+            border-radius: 1rem;
+            padding: 30px 20px;
+            box-shadow: 5px 5px 10px -5px var(--shadow-black),
+                -5px -5px 10px -5px var(--shadow-white),
+                inset 5px 5px 10px -5px var(--shadow-black),
+                inset -5px -5px 10px -5px var(--shadow-white);
+        }
+
+        .section code {
+            flex: 1;
+            background: #454545;
+            padding: 1rem;
+            font-size: 1.4rem;
+            color: var(--bg);
+            text-shadow: 1px 1px 5px black;
+        }
+
+        code .tag {
+            color: var(--primary);
+        }
+
+        code .tab {
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <h1>Alter Table 'book_records'</h1>
+        <code>
+            <span class="tag">ALTER TABLE</span> book_records 
+            <br>
+            <span class="tag">ADD </span> no_of_pages <span class="tag">int</span>;
+        </code>
+    </div>
+    <div class="section">
+        <h1>Add primary key in 'book_records'</h1>
+        <code>
+            <span class="tag">ALTER TABLE</span> book_records 
+            <br>
+            <span class="tag">ADD </span> book_id <span class="tag">int NOT NULL PRIMARY KEY</span>;
+        </code>
+    </div>
+    <div class="section">
+        <h1>insert data into 'book_records'</h1>
+        <code>
+            <span class="tag">INSERT INTO </span>book_records
+            <span class="tag">(</span>
+            <div class="tab">
+                Book_Library_No,
+                <br>
+                Book_Name,
+                <br>
+                Author_Name,
+                <br>
+                Book_Edition,
+                <br>
+                Price,
+                <br>
+                no_of_pages
+            </div>
+            <span class="tag">)</span>
+            <div class="tag">VALUES (</div>
+            <div class="tab">
+                34,
+                <br>
+                Mera Pariwar,
+                <br>
+                Mahadevi Verma,
+                <br>
+                Hindi edition,
+                <br>
+                119.00,
+                <br>
+                95
+            </div>
+            <span class="tag">)</span>
+        </code>
+    </div>
+</body>
+
+</html>

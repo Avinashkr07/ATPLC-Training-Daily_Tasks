@@ -1,0 +1,205 @@
+:root {
+    --primary: #ef8624;
+    --secondary: #175d89;
+    --secondary-hover: #134361;
+    --links: #43aadd;
+    --links-hover: #1993cf;
+    --text: #01070a;
+    --text-light: #363f43;
+    --bg: #e3f6ff;
+    --shadow: rgba(5, 6, 14, 0.2);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+a {
+    color: var(--links);
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--links-hover);
+    text-decoration: inherit;
+}
+
+a:active,
+a:focus {
+    outline-offset: .15rem;
+}
+
+img {
+    width: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn {
+    padding: .5rem 1rem;
+    background: var(--secondary);
+    color: var(--bg);
+    font-weight: 500;
+    text-shadow: 1px 2px 2px var(--shadow);
+    border-radius: .25rem;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background: var(--secondary-hover);
+    text-decoration: none;
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+lord-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    --lord-icon-primary: var(--text);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar */
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 .5rem 2rem .5rem var(--shadow);
+}
+
+header .wrapper {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logo img {
+    width: 4rem;
+    height: 4rem;
+}
+
+header .logo .header_title {
+    color: var(--primary);
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+    width: 100%;
+}
+
+.navbar .navlist {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.navlist .navlist_links {
+    padding: .5rem 1rem;
+    color: var(--text);
+    border-radius: .25rem;
+    transition: .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    user-select: none;
+    cursor: pointer;
+}
+
+.navlist .navlist_links span {
+    pointer-events: none;
+}
+
+.navlist .navlist_links:hover {
+    background: var(--shadow);
+}
+
+.navbar .book_now_btn {
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.navbar .book_now_btn lord-icon {
+    --lord-icon-primary: var(--bg);
+}
+
+/* --Navbar-- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --primary: #f9b473;
+        --secondary: #7bc9f9;
+        --secondary-hover: #3c91c7;
+        --links: #43aadd;
+        --links-hover: #1993cf;
+        --bg: #0d1214;
+        --text: #e3f6ff;
+        --shadow: rgba(5, 6, 14, 0.6);
+    }
+}
