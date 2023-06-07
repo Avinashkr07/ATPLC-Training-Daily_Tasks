@@ -1,5 +1,5 @@
 const fetchTask = async () => {
-    const response = await fetch('./Json/Tasks.json');
+    const response = await fetch('ATPLC-Training-Daily_Tasks/Json/Tasks.json');
     const tasks = await response.json();
     return tasks;
 }
